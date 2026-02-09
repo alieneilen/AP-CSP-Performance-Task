@@ -1,1 +1,33 @@
+# Snack Reccomender Code
+# Author: Lily Zajczenko
+# Date: 02/09/26
+# Description: This program lets the user describe the specific attributes of the type of snack they want, and, with that intel, reccomends them a specific snack.
+
+calorie_intake = []
+
+def snack_rec(calories, flavor):
+    calories = print(input("Would you like your snack to have high or low calories?: "))
+    calorie_intake(list)
+    flavor = print(input("Sweet or savory?: "))
+    if flavor == "sweet":
+        print(input("Do you like chocolate?: "))
+        if input == "yes" and calories == "high":
+            print("You should try __!")
+        elif input == "yes" and calories == "low":
+            print("You should try __!")
+        while input == "no":
+            continue
+    if flavor == "savory":
+        print(input("Do you like spicy food?: "))
+        if input == "yes" and calories == "high":
+            print("You should try __!")
+        elif input == "yes" and calories == "low":
+            print("You should try __!")
+    
+print(snack_rec(calorie_intake))
+
+
+                
+
+
 
