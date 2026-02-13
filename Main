@@ -129,4 +129,4 @@ def snack_rec(flavor):                                                          
 def total():                                                                                 # Second function to display final chosen snacks list
     print(f"All snacks chosen: {total_snacks}")
 
-print(snack_rec("Undecided"))                                                                # Run the program
+snack_rec("Undecided")                                                                       # Run the program
