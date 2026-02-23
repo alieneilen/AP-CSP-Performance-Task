@@ -106,7 +106,7 @@ def snack_rec(flavor):                                                          
                     else:
                         return total()
         else:
-            print("If you don't like spicy food, you should try __!")
+            print("If you don't like spicy food, you should try string cheese!")
             satisfied = input("Are you satisfied with this suggestion?: ")
             while satisfied == "no":
                 more = input("Do you want another snack?: ")
@@ -115,7 +115,7 @@ def snack_rec(flavor):                                                          
                 else:
                     return total()
             while satisfied == "yes":
-                total_snacks.append("__")
+                total_snacks.append("string cheese")
                 more = input("Do you want another snack?: ")
                 if more == "yes":
                     snack_rec(flavor)
