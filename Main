@@ -14,119 +14,189 @@
 #--------------------------------------------------------
 total_snacks = []                                                                             # Empty list that will then store all snack choices
 
-
-def snack_rec(flavor):                                                                        # Function to figure out what snack to give user
-    flavor = input("Would you like a sweet or savory snack?: ")
-    if flavor == "sweet":                                                                     # "If" statement to categorize if snack will be savory or sweet
-        chocolate = input("Do you like chocolate?: ")                                         # First input on what type of snack asked
-        if chocolate == "yes":
-            calories = input("Would you like your snack to have high or low calories?: ")     # Second input on snack
-            if calories == "high":                                                            # Correalating "If" statement 
-                print("You should try oreos!")
-                satisfied = input("Are you satisfied with this suggestion?: ")
-                while satisfied == "no":                                                      # While loop in order to repeat code when input is correct
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":                                                         # "If" statement that gives specific outcomes
-                        snack_rec(flavor)                                                     # Repeat function so that when correct input is implemented, code repeats original function
-                    else:
-                        return total()                                                        # If not repeating original function, then code goes to next function (ends code)
-                while satisfied == "yes":                                                     # Second while loop
-                    total_snacks.append("Oreos")                                              # Adds chosen snack to list
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":
-                        snack_rec(flavor)
-                    else:
-                        return total()
-            elif calories == "low":                                                           # Goes back to original "If" statement, gives extra outcomes/chances for new input
-                print("You should try a chocolate rice cake!")
-                satisfied = input("Are you satisfied with this suggestion?: ")
-                while satisfied == "no":
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":
-                        snack_rec(flavor)
-                    else:
-                        return total()
-                while satisfied == "yes":
-                    total_snacks.append("Chocolate rice cake")
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":
-                        snack_rec(flavor)
-                    else:
-                        return total()
-        else:
-            print("If you don't like chocolate, you should try gummy bears!")
-            satisfied = input("Are you satisfied with this suggestion?: ")
-            while satisfied == "no":
-                more = input("Do you want another snack?: ")
-                if more == "yes":
-                        snack_rec(flavor)
-                else:
-                        return total()
-            while satisfied == "yes":
-                total_snacks.append("Gummy bears")
-                more = input("Do you want another snack?: ")
-                if more == "yes":
-                        snack_rec(flavor)
-                else:
-                        return total()
-    elif flavor == "savory":                                                                 # Repeats code for second flavor profile option, with different snack options and questions
-        spicy = input("Do you like spicy food?: ")
-        if spicy == "yes":
-            calories = input("Would you like your snack to have high or low calories?: ")
-            if calories == "high":
-                print("You should try a McDonald's spicy snack wrap!")
-                satisfied = input("Are you satisfied with this suggestion?: ")
-                while satisfied == "no":
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":
-                        snack_rec(flavor)
-                    else:
-                        return total()
-                while satisfied == "yes":
-                    total_snacks.append("McDonald's spicy snack wrap")
-                    more = input("Do you want another snack?: ")
-                    if more == "yes":
-                        snack_rec(flavor)
-                    else:
-                        return total()
-            elif calories == "low":
-                print("You should try blue heat takis!")
+def main():
+    flavor = input("Do you want a sweet or savory snack? ")
+    if flavor == "sweet":                                                                        # Function to figure out what snack to give user                                                                   # "If" statement to categorize if snack will be savory or sweet
+            chocolate = input("Do you like chocolate?: ")                                         # First input on what type of snack asked
+            if chocolate == "yes":
+                calories = input("Would you like your snack to have high or low calories?: ")     # Second input on snack
+                if calories == "high":                                                            # Correalating "If" statement 
+                    print("You should try oreos!")
+                    satisfied = input("Are you satisfied with this suggestion?: ")
+                    while satisfied == "no":                                                      # While loop in order to repeat code when input is correct
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()                                                        # If not repeating original function, then code goes to next function (ends code)
+                    while satisfied == "yes":                                                     # Second while loop
+                        total_snacks.append("Oreos")                                              # Adds chosen snack to list
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+                elif calories == "low":                                                           # Goes back to original "If" statement, gives extra outcomes/chances for new input
+                    print("You should try a chocolate rice cake!")
+                    satisfied = input("Are you satisfied with this suggestion?: ")
+                    while satisfied == "no":
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+                    while satisfied == "yes":
+                        total_snacks.append("Chocolate rice cake")
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+            else:
+                print("If you don't like chocolate, you should try gummy bears!")
                 satisfied = input("Are you satisfied with this suggestion?: ")
                 while satisfied == "no":
                     more = input("Do you want another snack?: ")
                     if more == "yes":
-                        snack_rec(flavor)
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
                     else:
-                        return total()
+                            more == "done"
+                            return total()
                 while satisfied == "yes":
-                    total_snacks.append("Blue heat takis")
+                    total_snacks.append("Gummy bears")
                     more = input("Do you want another snack?: ")
                     if more == "yes":
-                        snack_rec(flavor)
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
                     else:
+                            more == "done"
+                            return total()
+    elif flavor == "savory":                                                                # Repeats code for second flavor profile option, with different snack options and questions
+            spicy = input("Do you like spicy food?: ")
+            if spicy == "yes":
+                calories = input("Would you like your snack to have high or low calories?: ")
+                if calories == "high":
+                    print("You should try a McDonald's spicy snack wrap!")
+                    satisfied = input("Are you satisfied with this suggestion?: ")
+                    while satisfied == "no":
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+                    while satisfied == "yes":
+                        total_snacks.append("McDonald's spicy snack wrap")
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+                elif calories == "low":
+                    print("You should try blue heat takis!")
+                    satisfied = input("Are you satisfied with this suggestion?: ")
+                    while satisfied == "no":
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+                    while satisfied == "yes":
+                        total_snacks.append("Blue heat takis")
+                        more = input("Do you want another snack?: ")
+                        if more == "yes":
+                            chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                            calories = "none" 
+                            satisfied = "none" 
+                            more = "none" 
+                            spicy = "none" 
+                            return main()
+                        else:
+                            more == "done"
+                            return total()
+            else:
+                print("If you don't like spicy food, you should try string cheese!")
+                satisfied = input("Are you satisfied with this suggestion?: ")
+                while satisfied == "no":
+                    more = input("Do you want another snack?: ")
+                    if more == "yes":
+                        chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                        calories = "none" 
+                        satisfied = "none" 
+                        more = "none" 
+                        spicy = "none" 
+                        return main()
+                    else:
+                        more == "done"
                         return total()
-        else:
-            print("If you don't like spicy food, you should try string cheese!")
-            satisfied = input("Are you satisfied with this suggestion?: ")
-            while satisfied == "no":
-                more = input("Do you want another snack?: ")
-                if more == "yes":
-                    snack_rec(flavor)
-                else:
-                    return total()
-            while satisfied == "yes":
-                total_snacks.append("string cheese")
-                more = input("Do you want another snack?: ")
-                if more == "yes":
-                    snack_rec(flavor)
-                else:
-                    return total()
-
+                while satisfied == "yes":
+                    total_snacks.append("string cheese")
+                    more = input("Do you want another snack?: ")
+                    if more == "yes":
+                        chocolate = "none"                                                         # "If" statement that gives specific outcomes
+                        calories = "none" 
+                        satisfied = "none" 
+                        more = "none" 
+                        spicy = "none" 
+                        return main()
+                    else:
+                        more == "done"
+                        return total()
     else:                                                                                    # Reroutes user to beginning of list when improper input is used
         print("Invalid input. Please try again.")
-        snack_rec(flavor)
+        return main()
 
 def total():                                                                                 # Second function to display final chosen snacks list
     print(f"All snacks chosen: {total_snacks}")
 
-snack_rec("Undecided")                                                                       # Run the program
+main()                                                                # Run the program
