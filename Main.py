@@ -181,7 +181,7 @@ def main():                                                                     
                         more == "done"
                         return total(total_snacks)
                 while satisfied == "yes":
-                    total_snacks.append("string cheese")                                            #"Append." staement implemented to add chosen snack to final list
+                    total_snacks.append("string cheese")                                            #"Append." statement implemented to add chosen snack to final list
                     more = input("Do you want another snack?: ")
                     if more == "yes":
                         chocolate = "none"                                                       
